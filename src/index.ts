@@ -1,13 +1,10 @@
-// const small = 1;
-// const medium = 2;
-// const large = 3;
-
-enum Size {
-  Small = 1,
-  Medium,
-  Large,
+function calculateTax(income: number, taxYear = 2022): number {
+  //   let x; no unused locals
+  if (taxYear < 2022) {
+    return income * 1.2;
+  }
+  return income * 1.3;
 }
 
-// will automatically assign 1,2,3 if we dont specify values
-let mySize: Size = Size.Medium;
-console.log(mySize);
+calculateTax(10_000, 2022);
+calculateTax(10_000);
