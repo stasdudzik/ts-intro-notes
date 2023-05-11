@@ -1,10 +1,13 @@
 "use strict";
-var Size;
-(function (Size) {
-    Size[Size["Small"] = 1] = "Small";
-    Size[Size["Medium"] = 2] = "Medium";
-    Size[Size["Large"] = 3] = "Large";
-})(Size || (Size = {}));
-let mySize = Size.Medium;
-console.log(mySize);
+function greet(name) {
+    if (name) {
+        console.log(name.toUpperCase());
+    }
+    else {
+        console.log("HOLA!");
+    }
+}
+greet(null);
+greet("Piotr");
+greet(undefined);
 //# sourceMappingURL=index.js.map
