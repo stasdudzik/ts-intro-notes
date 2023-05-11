@@ -1,10 +1,13 @@
-// ts will detect we cannot give 3 elements to 2 element tuple
-// let user: [number, string] = [1, "Staszek", 0];
+// const small = 1;
+// const medium = 2;
+// const large = 3;
 
-let user: [number, string] = [1, "Staszek"];
-//intellisense will suggest methods for different types in a tuple depending on index!
-// user[0].
-user[1];
+enum Size {
+  Small = 1,
+  Medium,
+  Large,
+}
 
-// ts tuple type compiles to regular js Array
-// its a good idea to restrict tuples to 2 elements in general in JS
+// will automatically assign 1,2,3 if we dont specify values
+let mySize: Size = Size.Medium;
+console.log(mySize);
